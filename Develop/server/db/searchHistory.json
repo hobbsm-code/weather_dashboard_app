@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Pittsburgh",
+    "id": "9430e535-d29c-46d1-89e5-61af16e805da"
+  },
+  {
+    "name": "San Franscisco",
+    "id": "6ca593e4-3535-487d-bc24-7db74fc30808"
+  },
+  {
+    "name": "New York",
+    "id": "de282571-8ccc-4c13-b640-d4288cf45026"
+  },
+  {
+    "name": "Baltimore",
+    "id": "8f224345-12ef-4d96-b508-7ffc32b329f2"
+  },
+  {
+    "name": "Atlanta",
+    "id": "ca42484b-2d03-44d2-a835-341239cc145d"
+  },
+  {
+    "name": "Omaha",
+    "id": "65acac0e-d54f-413d-a2bf-8eb5678533f1"
+  },
+  {
+    "name": "Portland",
+    "id": "64d92459-5d08-46bd-af4f-4557bf8db77f"
+  },
+  {
+    "name": "Strongsville",
+    "id": "031d6aa4-ae75-41c7-b787-b2144d26441b"
+  },
+  {
+    "name": "San Diego",
+    "id": "5488972a-8a77-42cf-a6f9-caacc16af5e4"
+  },
+  {
+    "name": "Wilmington",
+    "id": "23c361f4-9f0f-4640-9fc7-f3abf2f25fc5"
+  },
+  {
+    "name": "Nashville",
+    "id": "52754af7-4b79-463b-9ab9-fae1d1453da5"
+  },
+  {
+    "name": "Columbia Station",
+    "id": "f1ce4453-9455-424f-8ad9-ad6c63eac156"
+  },
+  {
+    "name": "Columbia",
+    "id": "7528a941-fccb-479d-af51-ab1310354c4d"
+  }
+]
