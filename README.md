@@ -40,7 +40,7 @@
   3. The application will open in your default browser and you will see the Weather Dashboard
 
   <div align="center">
-  <img src="./assets/Weather_dashboard_screenshot.png" alt="Weather Dashboard Screenshot" width="1200">
+  <img src="assets/Weather_dashboard_screenshot.png" alt="Weather Dashboard Screenshot" width="1200">
   </div>
 
   4. Enter a city name in the search bar and click the search button
@@ -49,9 +49,7 @@
   7. Click on any of the previous searches to see the weather for that location again
   8. Click the Delete button next to any of the previous searches to remove that city from the search history
   
-  5. <a href="./assets/vehicle_builder_demo.mp4">Click this link to watch a Demo Video</a>
-
-
+  
   ## Contribution  
   Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
