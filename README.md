@@ -1,168 +1,76 @@
-# 09 Servers and APIs: Weather Dashboard
-
-## Your Task
-
-External APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in their context, frequently consuming this data via a server.
-
-Your challenge is to build a weather dashboard application that calls the OpenWeather API and renders data in the browser.
-
-The application’s front end has already been created. It's your job to build the back end, connect the two, and then deploy the entire application to Render.
-
-* Use the [5-day weather forecast API](https://openweathermap.org/forecast5) to retrieve weather data for cities.
-
-* The base URL should look like the following:
-
-  ```url
-  https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
-  ```
-
-* After registering for a new API key, you may need to wait up to 2 hours for that API key to activate.
-
-* For more information on how to work with the OpenWeather API, refer to the [Full-Stack Blog on how to use API keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys).
-
-## User Story
-
-```md
-AS A traveler
-
-I WANT to see the weather outlook for multiple cities
-
-SO THAT I can plan a trip accordingly
-```
-
-## Acceptance Criteria
-
-```md
-GIVEN a weather dashboard with form inputs
-
-WHEN I search for a city
-
-THEN I am presented with current and future conditions for that city, and that city is added to the search history
-
-WHEN I view current weather conditions for that city
-
-THEN I am presented with the city name, the date, an icon representation of weather conditions, a description of the weather for the icon's alt tag, the temperature, the humidity, and the wind speed
-
-WHEN I view future weather conditions for that city
-
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-
-WHEN I click on a city in the search history
-
-THEN I am again presented with current and future conditions for that city
-```
-
-## Mock-Up
-
-The following image shows the web application's appearance and functionality:
-
-![The weather app includes a search option, a list of cities, and a 5-day forecast and current weather conditions for Atlanta ](./Assets/09-servers-and-apis-homework-demo.png)
-
-## Getting Started
-
-On the back end, the application should include a `searchHistory.json` file that will be used to store and retrieve cities using the `fs` module.
-
-The following HTML route should be created:
-
-* `GET *` should return the `index.html` file.
-
-The following API routes should be created:
-
-* `GET /api/weather/history` should read the `searchHistory.json` file and return all saved cities as JSON.
-
-* `POST /api/weather` should receive a city name to save on the request body, add it to the `searchHistory.json` file, and then return associated weather data to the client. You'll need to find a way to give each city name a unique id when it's saved (look into npm packages that could do this for you).
-
-Refer to the [Full-Stack Blog on deploying to Render](https://coding-boot-camp.github.io/full-stack/render/render-deployment-guide) and the [Render documentation on setting environment variables](https://docs.render.com/configure-environment-variables).
-
----
-
-## 💡 Hints
-
-* Using the 5-day weather forecast API, you'll notice that you'll need to pass in coordinates instead of just a city name. Using the OpenWeatherMap APIs, how could we retrieve geographical coordinates given a city name?
-
-* How could we make the OpenWeather API calls server-side, parse the data, and then send the parsed data client-side?
-
-## 🏆 Bonus
-
-This application offers the DELETE functionality on the front end. As a bonus, try to add the DELETE route to the application using the following guideline:
-
-* `DELETE /api/weather/history/:id` should receive a route parameter that contains the id of a city name to delete. To delete a city, you'll need to read all the cities from the `searchHistory.json` file, remove the city with the given `id` property, and then rewrite the cities to the `searchHistory.json` file.
-
----
-
-## Grading Requirements
-
-> **Note** If a Challenge assignment submission is marked as “0”, it's considered incomplete and won't count toward your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code.
->
-> * A repository that includes a unique name but nothing else.
->
-> * A repository that includes only a README file but nothing else.
->
-> * A repository that includes only starter code.
-
-This Challenge is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 40%
-
-The Challenge satisfies all of the above acceptance criteria, plus the following:
-
-* Application uses the OpenWeather API to retrieve weather data.
-
-* Application back end must store cities that have a unique id in a JSON file.
-
-* Application must be deployed to Render.
-
-### Deployment: 32%
-
-The Challenge satisfies all of the above acceptance criteria, plus the following:
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-The Challenge satisfies all of the above acceptance criteria, plus the following:
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the Challenge instructions.
-
-### Repository Quality: 13%
-
-The Challenge satisfies all of the above acceptance criteria, plus the following:
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-### Bonus: +10 Points
-
-Fulfilling the following can add up to 10 points to your grade. Note that the highest grade you can achieve is still 100:
-
-* Application allows users to delete cities.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README file describing the project.
-
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+# README Generator  
+  ## License [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  https://opensource.org/licenses/MIT  
+    This project is licensed under the MIT license. 
+    Click the badge for more information.  
+  ## Description  
+  This Weather Dashboard application is designed so a user can search by city name and will be presented with the current weather and the 5-day forecast for that location. 
+
+  Additionally, the application will store all previous city searches in a list on the left side of the screen. The user can click on any of the previous searches to see the weather for that location again. The user can also clear the search history by clicking the "Clear History" button.
+
+  The application uses the OpenWeather API to retrieve weather data. The data is then displayed on the screen using dynamically created HTML elements. The application also uses local storage to store the search history so that the user can see their previous searches when they return to the application.
+
+  The application is built using HTML, CSS, and JavaScript. The JavaScript code uses jQuery to make AJAX calls to the OpenWeather API and to dynamically create the HTML elements that display the weather data. The application is responsive and uses Bootstrap to ensure that it looks good on all screen sizes.
+
+
+  ## Table of Contents  
+  - [Description](#description)  
+  - [Installation](#installation)  
+  - [Usage](#usage)  
+  - [License](#license)  
+  - [Contribution](#contribution)  
+  - [Tests](#tests)  
+  - [Questions](#questions)  
+  ## Installation  
+  To install this project:  
+
+  1. Clone the repo
+   ```sh
+    git clone git@github.com:hobbsm-code/weather_dashboard_app.git
+   ```
+  2. Install NPM packages (from the root directory)
+   ```sh
+   npm run install
+   ```
+
+  ## Usage  
+  Please follow these instructions to use the Weather Dashboard application:
+
+  1. Open a terminal and cd into the Develop directory
+  2. Type npm run start:dev to run the application in development mode or npm run start to run the application in production mode
+  3. The application will open in your default browser and you will see the Weather Dashboard
+
+  <div align="center">
+  <img src="./assets/Weather_dashboard_screenshot.png" alt="Weather Dashboard Screenshot" width="1200">
+  </div>
+
+  4. Enter a city name in the search bar and click the search button
+  5. The current weather and 5-day forecast for that city will be displayed on the screen
+  6. The city name will be added to the search history list on the left side of the screen
+  7. Click on any of the previous searches to see the weather for that location again
+  8. Click the Delete button next to any of the previous searches to remove that city from the search history
+  
+  5. <a href="./assets/vehicle_builder_demo.mp4">Click this link to watch a Demo Video</a>
+
+
+  ## Contribution  
+  Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+  If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+  Don't forget to give the project a star! Thanks again!
+
+  1. Fork the Project
+  2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+  3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+  4. Push to the Branch (`git push origin feature/AmazingFeature`)
+  5. Open a Pull Request
+
+  ## Tests  
+  Test instructions:  
+
+  This project does not currently have any unit tests. Having test coverage is always welcome. Please feel free to contribute some unit tests. Otherwise, it is our goal to improve the test coverage as the project becomes more mature and more complex functionality is added.
+
+  ## Questions  
+  For questions, please contact me at:  
+  GitHub: [Find me on GitHub ->  hobbsm-code](https://github.com/Find me on GitHub ->  hobbsm-code)  
+  Email: [Email me at: hobbsm321@gmail.com]  
+  
